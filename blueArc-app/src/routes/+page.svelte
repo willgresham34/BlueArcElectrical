@@ -1,9 +1,9 @@
 <script lang="ts">
 	import * as Carousel from '$lib/components/ui/carousel/index.js';
-	import Autoplay from 'embla-carousel-autoplay';
-	import { carouselPhotos } from '$lib/carouselPhotos';
+	//import Autoplay from 'embla-carousel-autoplay';
+	//import { carouselPhotos } from '$lib/carouselPhotos';
 
-	const plugin = Autoplay({ delay: 5000, stopOnInteraction: true });
+	//const plugin = Autoplay({ delay: 5000, stopOnInteraction: true });
 </script>
 
 <div class="w-full">
@@ -20,10 +20,10 @@
 		<div class="m-12 flex h-full flex-col items-center gap-4">
 			<h2>Welcome Home!</h2>
 			<h3>
-				At Agile Construction, we're dedicated to bringing the vision for your home to life. Whether
-				you're dreaming of starting from the ground up with a brand-new build, enhancing your living
-				space with a custom addition, or simply adding the perfect deck to enjoy your outdoor
-				moments, we're here to help every step of the way. We want to be your Builder for life!
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+				Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+				Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+				Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
 			</h3>
 			<div class="mt-4">
 				<a
@@ -70,14 +70,14 @@
 		<div class="grid-item flex w-full items-center justify-center">
 			<div class="w-1/3 sm:w-2/3">
 				<div class="logoContainer bg-primary">
-					<!-- <img src="/Agile_Logo.JPEG" alt="logo" class="logo-image" /> -->
+					<!-- <img src="" alt="logo" class="logo-image" /> -->
 				</div>
 			</div>
 		</div>
 	</div>
-</div>
 
-<style>
+
+<!-- <style>
 	h1 {
 		font-size: 56px;
 	}
@@ -192,4 +192,4 @@
 			padding: 0.5em;
 		}
 	}
-</style>
+</style> -->

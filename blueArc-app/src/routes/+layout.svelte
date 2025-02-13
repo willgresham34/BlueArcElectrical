@@ -46,7 +46,7 @@
 >
 	<div class="flex items-center">
 		<a href="/">
-			<img src="/Agile_Logo.JPEG" alt="Logo" height="60px" width="60px" />
+			<!-- <img src="" alt="Logo" height="60px" width="60px" /> -->
 		</a>
 	</div>
 
@@ -100,18 +100,10 @@
 				<h3 class="mb-4 text-lg font-semibold">Follow Us</h3>
 				<ul>
 					<li>
-						<a
-							href="https://www.facebook.com/agileconstructionga/"
-							target="_blank"
-							class="text-slate-300 hover:text-white">Facebook</a
-						>
+						<a href="" target="_blank" class="text-slate-300 hover:text-white">Facebook</a>
 					</li>
 					<li>
-						<a
-							href="https://www.instagram.com/AgileConstruction/"
-							target="_blank"
-							class="text-slate-300 hover:text-white">Instagram</a
-						>
+						<a href="" target="_blank" class="text-slate-300 hover:text-white">Instagram</a>
 					</li>
 					<!-- <li><a href="#" class="text-slate-300 hover:text-white" target="_blank">Twitter</a></li> -->
 				</ul>
@@ -122,14 +114,10 @@
 				<h3 class="mb-4 text-lg font-semibold">Contact Information</h3>
 				<ul>
 					<li>
-						<a href="tel:+17705607975" class="text-slate-300 hover:text-white"
-							>Phone: +1 (770) 560-7975</a
-						>
+						<a href="tel:" class="text-slate-300 hover:text-white">Phone: </a>
 					</li>
 					<li>
-						<a href="mailto:example@email.com" class=" text-slate-300 hover:text-white"
-							>agileconstruction123@gmail.com</a
-						>
+						<a href="mailto:" class=" text-slate-300 hover:text-white"></a>
 					</li>
 				</ul>
 			</div>
@@ -142,7 +130,7 @@
 		<div class="font-semibold">Will Gresham</div>
 	</div>
 	<!-- <div class="mt-6 pt-4 text-center text-sm">
-		<p>&copy; 2024 Agile Construction. All rights reserved.</p>
+		<p>&copy;</p>
 	</div> -->
 </footer>
 

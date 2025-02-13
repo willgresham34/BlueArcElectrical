@@ -1,9 +1,9 @@
 <script lang="ts">
-	import * as Carousel from '$lib/components/ui/carousel/index.js';
-	import Autoplay from 'embla-carousel-autoplay';
-	import { familyPhotos } from '$lib/familyPhotos';
+	// import * as Carousel from '$lib/components/ui/carousel/index.js';
+	// import Autoplay from 'embla-carousel-autoplay';
+	// import { familyPhotos } from '$lib/familyPhotos';
 
-	const plugin = Autoplay({ delay: 5000, stopOnInteraction: true });
+	// const plugin = Autoplay({ delay: 5000, stopOnInteraction: true });
 </script>
 
 <div class="flex h-fit flex-col items-center justify-center">
@@ -16,23 +16,13 @@
 		</div>
 		<div class="lg:text-md text-lg">
 			<p>
-				Welcome to <span class="text-accent-foreground font-semibold">Agile Construction</span>,
-				your trusted partner for all your construction and renovation needs! Our founder Michael
-				Gresham Jr is a second generation builder who has been serving all over Georgia for over
-				<span class="text-accent-foreground font-semibold"> 30 years</span>.
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 			</p>
 			<p>
-				Our journey began with a simple mission: to provide high-quality craftsmanship and
-				personalized service to every client. Today, that mission remains at the heart of everything
-				we do. From home renovations to custom builds, we will work tirelessly to help bring your
-				vision to life.
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 			</p>
 			<p>
-				At <span class="text-accent-foreground font-semibold">Agile Construction</span>, we take
-				pride in treating every project as if it were our own. Our dedicated team and trusted
-				partners consistently deliver exceptional quality at the right price. As a family-owned
-				company, we value building strong relationships with our clients and creating spaces that
-				bring people together.
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 			</p>
 
 			<p>We look forward to building something great together!</p>
@@ -44,7 +34,7 @@
 	</div>
 
 	<div class="carousel mb-4">
-		<Carousel.Root plugins={[plugin]}>
+		<!-- <Carousel.Root plugins={[plugin]}>
 			<Carousel.Content>
 				{#each familyPhotos as photo}
 					<Carousel.Item class=" basis-1/2 sm:basis-1/3 lg:basis-1/4 xl:basis-1/5"
@@ -52,7 +42,7 @@
 					>
 				{/each}
 			</Carousel.Content>
-		</Carousel.Root>
+		</Carousel.Root> -->
 	</div>
 </div>
 
