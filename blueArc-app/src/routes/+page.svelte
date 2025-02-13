@@ -11,7 +11,7 @@
 		<div class="flex w-full items-center justify-center" id="homeBanner">
 			<div class="bannerText flex flex-col items-center">
 				<h1>New Home and Renovation Experts</h1>
-				<span class="bannerSubText">Over 25 Years of Experience! State Licensed and Insured!</span>
+				<span class="bannerSubText"></span>
 			</div>
 		</div>
 	</div>
@@ -20,10 +20,11 @@
 		<div class="m-12 flex h-full flex-col items-center gap-4">
 			<h2>Welcome Home!</h2>
 			<h3>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-				Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-				Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-				Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+				labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+				laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+				voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+				cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 			</h3>
 			<div class="mt-4">
 				<a
@@ -67,17 +68,16 @@
 				</div>
 			</section>
 		</div> -->
-		<div class="grid-item flex w-full items-center justify-center">
-			<div class="w-1/3 sm:w-2/3">
-				<div class="logoContainer bg-primary">
-					<!-- <img src="" alt="logo" class="logo-image" /> -->
-				</div>
+	<div class="grid-item flex w-full items-center justify-center">
+		<div class="w-1/3 sm:w-2/3">
+			<div class="logoContainer bg-primary">
+				<!-- <img src="" alt="logo" class="logo-image" /> -->
 			</div>
 		</div>
 	</div>
+</div>
 
-
-<!-- <style>
+<style>
 	h1 {
 		font-size: 56px;
 	}
@@ -108,7 +108,7 @@
 		left: 0;
 		width: 100%;
 		height: 100%;
-		background-image: url('/builds/D_house.avif');
+		background-image: url('');
 		background-size: cover;
 		background-position: center;
 		background-repeat: no-repeat;
@@ -192,4 +192,4 @@
 			padding: 0.5em;
 		}
 	}
-</style> -->
+</style>

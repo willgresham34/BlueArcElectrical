@@ -1,12 +1,12 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { fetchPhotosFromPhotoset } from '$lib/flickrService';
+	//import { fetchPhotosFromPhotoset } from '$lib/flickrService';
 
 	let galleryPhotos: any[] = [];
 
-	onMount(async () => {
-		galleryPhotos = await fetchPhotosFromPhotoset('72177720323058330');
-	});
+	// onMount(async () => {
+	// 	galleryPhotos = await fetchPhotosFromPhotoset('72177720323058330');
+	// });
 
 	// Current index of the modal
 	let currentIndex = 0;

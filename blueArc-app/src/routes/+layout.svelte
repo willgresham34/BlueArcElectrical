@@ -41,12 +41,10 @@
 	});
 </script>
 
-<nav
-	class="bg-primary sticky top-0 z-10 flex items-center justify-between p-2 text-white shadow-xl"
->
+<nav class="sticky top-0 z-10 flex items-center justify-between bg-white p-2 text-white shadow-xl">
 	<div class="flex items-center">
 		<a href="/">
-			<!-- <img src="" alt="Logo" height="60px" width="60px" /> -->
+			<img src="/logo.png" alt="Logo" height="60px" width="60px" />
 		</a>
 	</div>
 
@@ -59,7 +57,7 @@
 
 	<!-- Navigation Menu -->
 	<ul
-		class="nav-links bg-accent-foreground flex pr-4 text-white md:static md:flex md:translate-y-0 md:flex-row md:opacity-100"
+		class="nav-links text-primary flex bg-white pr-4 md:static md:flex md:translate-y-0 md:flex-row md:opacity-100"
 		class:hidden={!isMenuOpen}
 		class:translate-y-full={isMenuOpen}
 	>
@@ -82,7 +80,7 @@
 	{@render children()}
 </div>
 
-<footer class="mt-8 text-white">
+<footer class="mt-8 text-black">
 	<div class=" mx-auto max-w-7xl px-6 py-6">
 		<div class="grid grid-cols-2 gap-6 sm:grid-cols-3">
 			<!-- About, Contact, and Gallery Links -->
@@ -100,10 +98,10 @@
 				<h3 class="mb-4 text-lg font-semibold">Follow Us</h3>
 				<ul>
 					<li>
-						<a href="" target="_blank" class="text-slate-300 hover:text-white">Facebook</a>
+						<!-- <a href="" target="_blank" class="text-slate-300 hover:text-white">Facebook</a> -->
 					</li>
 					<li>
-						<a href="" target="_blank" class="text-slate-300 hover:text-white">Instagram</a>
+						<!-- <a href="" target="_blank" class="text-slate-300 hover:text-white">Instagram</a> -->
 					</li>
 					<!-- <li><a href="#" class="text-slate-300 hover:text-white" target="_blank">Twitter</a></li> -->
 				</ul>
@@ -117,7 +115,7 @@
 						<a href="tel:" class="text-slate-300 hover:text-white">Phone: </a>
 					</li>
 					<li>
-						<a href="mailto:" class=" text-slate-300 hover:text-white"></a>
+						<!-- <a href="mailto:" class=" text-slate-300 hover:text-white"></a> -->
 					</li>
 				</ul>
 			</div>
@@ -150,7 +148,7 @@
 	}
 
 	footer {
-		background-color: #1d4263;
+		background-color: #0777d9;
 	}
 
 	@keyframes fadeDown {
@@ -189,7 +187,7 @@
 	}
 
 	.hamburger-icon .line {
-		background-color: white;
+		background-color: #0777d9;
 		height: 3px;
 		width: 100%;
 		border-radius: 2px;
@@ -214,7 +212,7 @@
 	}
 
 	.nav-links a {
-		color: white;
+		color: black;
 		text-decoration: none;
 	}
 
@@ -232,9 +230,9 @@
 	}
 
 	.nav-links li.selected a {
-		border-bottom: 2px solid white;
+		border-bottom: 2px solid #0777d9;
 		padding-bottom: 0.25rem;
-		color: #f0f0f0;
+		color: #0777d9;
 	}
 
 	/* Media query for larger screens */

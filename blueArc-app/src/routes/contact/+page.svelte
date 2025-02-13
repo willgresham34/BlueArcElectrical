@@ -2,10 +2,12 @@
 	import { Input } from '$lib/components/ui/input/index.js';
 	import { Button } from '$lib/components/ui/button/index.js';
 	import { Label } from '$lib/components/ui/label/index.js';
-	// import { Textarea } from '$lib/components/ui/textarea';
-	// import * as Select from '$lib/components/ui/select';
-	// import type { Selected } from 'bits-ui';
-	// import emailjs from '@emailjs/browser';
+	import { Textarea } from '$lib/components/ui/textarea/index.js';
+	import { Select } from '$lib/components/ui/select/index.js';
+	import { SelectItem } from '$lib/components/ui/select/index.js';
+	import { SelectContent } from '$lib/components/ui/select/index.js'
+	import type { Selected } from 'bits-ui';
+	import emailjs from '@emailjs/browser';
 
 	let formData = {
 		email: '',
@@ -157,20 +159,20 @@
 						</div>
 						<div>
 							<Label for="contactPreference">Contact Preference</Label>
-							<Select.Root
+							<!-- <Select
 								onSelectedChange={(v: Selected<string> | undefined) =>
 									handleContactPreferenceChange(v)}
 							>
-								<Select.Trigger class="">
+								<SelectTrigger class="">
 									<Select.Value placeholder="Please Choose one" />
-								</Select.Trigger>
-								<Select.Content>
-									<Select.Item value="Email">Email</Select.Item>
-									<Select.Item value="Text Message">Text Message</Select.Item>
-									<Select.Item value="Phone Call">Phone Call</Select.Item>
-								</Select.Content>
-								<Select.Input name="contactPreference" bind:value={formData.contactPreference} />
-							</Select.Root>
+								</SelectTrigger>
+								<SelectContent>
+									<SelectItem value="Email">Email</SelectItem>
+									<SelectItem value="Text Message">Text Message</SelectItem>
+									<SelectItem value="Phone Call">Phone Call</SelectItem>
+								</SelectContent>
+								<SelectInput name="contactPreference" bind:value={formData.contactPreference} />
+							</Select> -->
 						</div>
 
 						<div>
