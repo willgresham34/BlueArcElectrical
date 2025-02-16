@@ -1,6 +1,6 @@
 <script>
 	import Particles, { particlesInit } from '@tsparticles/svelte';
-	//import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
+	import { loadFull } from 'tsparticles'; // if you are going to use `loadFull`, install the "tsparticles" package too.
 	import { loadSlim } from '@tsparticles/slim'; // if you are going to use `loadSlim`, install the "@tsparticles/slim" package too.
 
 	let particlesUrl = 'http://foo.bar/particles.json'; // placeholder, replace it with a real url
@@ -8,17 +8,20 @@
 	let particlesConfig = {
 		particles: {
 			color: {
-				value: '#000'
+				value: '#0777d9'
 			},
 			links: {
 				enable: true,
-				color: '#000'
+				color: '#0777d9',
+				width: 1,
+				distance: 100
 			},
 			move: {
-				enable: true
+				enable: true,
+				speed: 1
 			},
 			number: {
-				value: 100
+				value: 150
 			}
 		}
 	};
@@ -36,15 +39,28 @@
 		// you can use main to customize the tsParticles instance adding presets or custom shapes
 		// this loads the tsparticles package bundle, it's the easiest method for getting everything ready
 		// starting from v2 you can add only the features you need reducing the bundle size
-		//await loadFull(engine);
-		await loadSlim(engine);
+		await loadFull(engine);
+		//await loadSlim(engine);
 	});
 </script>
 
-<Particles
-	id="tsparticles"
-	class="put your classes here"
-	style=""
-	options={particlesConfig}
-	on:particlesLoaded={onParticlesLoaded}
-/>
+<div class="particles-container">
+	<Particles
+		id="tsparticles"
+		class="put your classes here"
+		style=""
+		options={particlesConfig}
+		on:particlesLoaded={onParticlesLoaded}
+	/>
+</div>
+
+<style>
+	.particles-container {
+		position: absolute; /* or relative */
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1; /* Ensures it stays behind other content */
+	}
+</style>

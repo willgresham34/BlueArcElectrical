@@ -78,6 +78,7 @@
 </nav>
 
 <div class="body">
+	<Particles />
 	{@render children()}
 </div>
 

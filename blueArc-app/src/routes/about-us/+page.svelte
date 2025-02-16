@@ -7,14 +7,16 @@
 </script>
 
 <div class="flex h-fit flex-col items-center justify-center">
-	<div class="w-full pt-6 text-center">
-		<h1 class="text-xl font-semibold sm:text-3xl">About Us</h1>
+	<div class="pt-6 text-center">
+		<h1 class="bg-primary rounded-lg p-2 text-xl font-semibold text-white shadow-2xl sm:text-3xl">
+			About Us
+		</h1>
 	</div>
 	<div class="about-us grid grid-cols-1 gap-4 lg:grid-cols-2">
-		<div class="flex items-center justify-center">
-			<!-- <img class="team-photo" src="KrissyAndMichael.avif" alt="Our Team" /> -->
-		</div>
-		<div class="lg:text-md text-lg">
+		<!-- <div class="flex items-center justify-center">
+			<img class="team-photo" src="KrissyAndMichael.avif" alt="Our Team" /> 
+		</div> -->
+		<div class="lg:text-md paragraphs bg-primary flex flex-col gap-4 text-lg shadow-2xl">
 			<p>
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
 				labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
@@ -89,14 +91,20 @@
 		max-width: 600px;
 	}
 
-	p {
-		margin: 1rem 0;
-	}
-
 	.carousel img {
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
 		aspect-ratio: 4 / 3;
+	}
+
+	.paragraphs {
+		background-color: rgb(69, 84, 93);
+		color: white;
+		box-shadow:
+			0 20px 25px -5px rgb(0 0 0 / 0.1),
+			0 8px 10px -6px rgb(0 0 0 / 0.1);
+		padding: 1rem;
+		border-radius: 5px;
 	}
 </style>

@@ -11,7 +11,7 @@
 	<div class="background-container">
 		<div class="flex w-full items-center justify-center" id="homeBanner">
 			<div class="bannerText flex flex-col items-center">
-				<h1>New Home and Renovation Experts</h1>
+				<h1 class="bg-black p-2 text-white">New Home and Renovation Experts</h1>
 				<span class="bannerSubText"></span>
 			</div>
 		</div>
