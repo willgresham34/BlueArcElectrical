@@ -2,6 +2,7 @@
 	import { onMount } from 'svelte';
 	import '../app.css';
 	import { afterNavigate } from '$app/navigation';
+	import Particles from '$lib/components/ui/particles/Particles.svelte';
 
 	let { children } = $props();
 	let isMenuOpen = $state(false);

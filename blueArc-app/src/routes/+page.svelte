@@ -1,5 +1,6 @@
 <script lang="ts">
 	import * as Carousel from '$lib/components/ui/carousel/index.js';
+	import Particles from '$lib/components/ui/particles/Particles.svelte';
 	//import Autoplay from 'embla-carousel-autoplay';
 	//import { carouselPhotos } from '$lib/carouselPhotos';
 
