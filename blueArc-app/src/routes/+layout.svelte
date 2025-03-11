@@ -82,12 +82,12 @@
 	{@render children()}
 </div>
 
-<footer class="mt-8 text-black">
+<footer class="bg-primary-foreground mt-8 text-white shadow-xl">
 	<div class=" mx-auto max-w-7xl px-6 py-6">
 		<div class="grid grid-cols-2 gap-6 sm:grid-cols-3">
 			<!-- About, Contact, and Gallery Links -->
 			<div>
-				<h3 class="mb-4 text-lg font-semibold">Quick Links</h3>
+				<h3 class="text-primary mb-4 text-lg font-semibold">Quick Links</h3>
 				<ul>
 					<li><a href="/about-us" class="text-slate-300 hover:text-white">About Us</a></li>
 					<li><a href="/contact" class="text-slate-300 hover:text-white">Contact</a></li>
@@ -97,13 +97,21 @@
 
 			<!-- Social Media Links -->
 			<div>
-				<h3 class="mb-4 text-lg font-semibold">Follow Us</h3>
+				<h3 class="text-primary mb-4 text-lg font-semibold">Follow Us</h3>
 				<ul>
 					<li>
-						<!-- <a href="" target="_blank" class="text-slate-300 hover:text-white">Facebook</a> -->
+						<a
+							href="https://www.facebook.com/share/1E4fyQC7qa/?mibextid=wwXIfr"
+							target="_blank"
+							class="text-slate-300 hover:text-white">Facebook</a
+						>
 					</li>
 					<li>
-						<!-- <a href="" target="_blank" class="text-slate-300 hover:text-white">Instagram</a> -->
+						<a
+							href="https://www.instagram.com/bluearcelectricllc?igsh=MWI5MGoxazlzZjF6eA%3D%3D&utm_source=qr"
+							target="_blank"
+							class="text-slate-300 hover:text-white">Instagram</a
+						>
 					</li>
 					<!-- <li><a href="#" class="text-slate-300 hover:text-white" target="_blank">Twitter</a></li> -->
 				</ul>
@@ -111,13 +119,17 @@
 
 			<!-- Contact Info (Phone, Email) -->
 			<div class="col-span-2 sm:col-span-1">
-				<h3 class="mb-4 text-lg font-semibold">Contact Information</h3>
+				<h3 class="text-primary mb-4 text-lg font-semibold">Contact Information</h3>
 				<ul>
 					<li>
-						<a href="tel:" class="text-slate-300 hover:text-white">Phone: </a>
+						<a href="tel:4049334101" class="text-slate-300 hover:text-white"
+							>Phone: (404) 933-4101
+						</a>
 					</li>
 					<li>
-						<!-- <a href="mailto:" class=" text-slate-300 hover:text-white"></a> -->
+						<a href="mailto:bluearcelectricalllc@gmail.com" class=" text-slate-300 hover:text-white"
+							>bluearcelectricalllc@gmail.com</a
+						>
 					</li>
 				</ul>
 			</div>
@@ -147,10 +159,6 @@
 
 	.body {
 		min-height: 90vh;
-	}
-
-	footer {
-		background-color: #0777d9;
 	}
 
 	@keyframes fadeDown {
@@ -189,7 +197,7 @@
 	}
 
 	.hamburger-icon .line {
-		background-color: #0777d9;
+		background-color: hsl(var(--primary-foreground));
 		height: 3px;
 		width: 100%;
 		border-radius: 2px;
@@ -214,7 +222,7 @@
 	}
 
 	.nav-links a {
-		color: black;
+		color: hsl(var(--primary-foreground));
 		text-decoration: none;
 	}
 
@@ -232,9 +240,14 @@
 	}
 
 	.nav-links li.selected a {
-		border-bottom: 2px solid #0777d9;
+		border-bottom: 2px solid hsl(var(--secondary));
 		padding-bottom: 0.25rem;
-		color: #0777d9;
+		color: hsl(var(--secondary));
+	}
+
+	.nav-links li a:hover {
+		padding-bottom: 0.25rem;
+		color: hsl(var(--secondary));
 	}
 
 	/* Media query for larger screens */

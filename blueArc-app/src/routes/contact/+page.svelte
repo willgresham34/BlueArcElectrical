@@ -3,10 +3,17 @@
 	import { Button } from '$lib/components/ui/button/index.js';
 	import { Label } from '$lib/components/ui/label/index.js';
 	import { Textarea } from '$lib/components/ui/textarea/index.js';
-	import { Select } from '$lib/components/ui/select/index.js';
-	import { SelectItem } from '$lib/components/ui/select/index.js';
-	import { SelectContent } from '$lib/components/ui/select/index.js'
+	import {
+		Select,
+		SelectTrigger,
+		SelectContent,
+		SelectItem,
+		SelectSeparator,
+		SelectScrollUpButton,
+		SelectScrollDownButton
+	} from '$lib/components/ui/select/index.js';
 	import type { Selected } from 'bits-ui';
+	import { writable } from 'svelte/store';
 	import emailjs from '@emailjs/browser';
 
 	let formData = {
@@ -19,20 +26,32 @@
 		message: ''
 	};
 
-	const handleContactPreferenceChange = (event: Selected<string> | undefined) => {
-		const pref = event?.value ?? ''; //
-		formData.contactPreference = pref;
-	};
-
 	const handleSubmit = async (event: Event) => {
 		event.preventDefault();
 
+		const requiredFields = [
+			'email',
+			'firstName',
+			'lastName',
+			'contactPreference',
+			'subject',
+			'message'
+		];
+		const missingFields = requiredFields.filter(
+			(field) => !formData[field as keyof typeof formData].trim()
+		);
+
+		if (missingFields.length > 0) {
+			alert(`Please fill out the following required fields: ${missingFields.join(', ')}`);
+			return;
+		}
+
 		try {
 			const response = await emailjs.send(
-				'agileConEmailService',
-				'agileCon_SiteEmail',
+				'service_BlueArc',
+				'template_BlueArc',
 				formData,
-				'WBUUvS6M_Z3niupKb'
+				'ULLZ_FCOOOT4n6eZa'
 			);
 			console.log('Email sent successfully:', response);
 			formData = {
@@ -53,33 +72,41 @@
 </script>
 
 <div>
-	<div class=" flex flex-col items-center gap-4 p-4">
-		<h1 class="contact">Contact Us</h1>
+	<div class=" flex flex-col items-center gap-2 p-4">
+		<h1 class="contact bg-primary rounded-xl px-4 py-2 text-white">Contact Us</h1>
 	</div>
 	<div class="mx-2">
 		<div class=" grid grid-cols-1 gap-4 rounded-xl sm:grid-cols-2">
 			<!-- left col -->
-			<div
-				class="bg-accent-foreground grid grid-cols-2 gap-4 rounded-xl p-4 shadow-2xl sm:grid-cols-1"
-			>
+			<div class="bg-primary grid grid-cols-2 gap-4 rounded-xl p-4 shadow-2xl sm:grid-cols-1">
 				<div class="flex flex-col items-center justify-center">
-					<div class="text-gray-500 transition duration-200 hover:text-blue-500" id="phoneIcon">
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							viewBox="0 0 24 24"
-							class="h-full w-full fill-current"
-						>
-							<path
-								d="M21.384,17.752a2.108,2.108,0,0,1-.522,3.359,7.543,7.543,0,0,1-5.476.642C10.5,20.523,3.477,13.5,2.247,8.614a7.543,7.543,0,0,1,.642-5.476,2.108,2.108,0,0,1,3.359-.522L8.333,4.7a2.094,2.094,0,0,1,.445,2.328A3.877,3.877,0,0,1,8,8.2c-2.384,2.384,5.417,10.185,7.8,7.8a3.877,3.877,0,0,1,1.173-.781,2.092,2.092,0,0,1,2.328.445Z"
-							/>
-						</svg>
+					<div id="phoneIcon">
+						<a href="tel:+14049334101" class="text-white" aria-label="Phone">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								x="0px"
+								y="0px"
+								width="100"
+								height="100"
+								viewBox="0 0 48 48"
+							>
+								<path
+									fill="#0f0"
+									d="M13,42h22c3.866,0,7-3.134,7-7V13c0-3.866-3.134-7-7-7H13c-3.866,0-7,3.134-7,7v22	C6,38.866,9.134,42,13,42z"
+								></path><path
+									fill="#fff"
+									d="M35.45,31.041l-4.612-3.051c-0.563-0.341-1.267-0.347-1.836-0.017c0,0,0,0-1.978,1.153	c-0.265,0.154-0.52,0.183-0.726,0.145c-0.262-0.048-0.442-0.191-0.454-0.201c-1.087-0.797-2.357-1.852-3.711-3.205	c-1.353-1.353-2.408-2.623-3.205-3.711c-0.009-0.013-0.153-0.193-0.201-0.454c-0.037-0.206-0.009-0.46,0.145-0.726	c1.153-1.978,1.153-1.978,1.153-1.978c0.331-0.569,0.324-1.274-0.017-1.836l-3.051-4.612c-0.378-0.571-1.151-0.722-1.714-0.332	c0,0-1.445,0.989-1.922,1.325c-0.764,0.538-1.01,1.356-1.011,2.496c-0.002,1.604,1.38,6.629,7.201,12.45l0,0l0,0l0,0l0,0	c5.822,5.822,10.846,7.203,12.45,7.201c1.14-0.001,1.958-0.248,2.496-1.011c0.336-0.477,1.325-1.922,1.325-1.922	C36.172,32.192,36.022,31.419,35.45,31.041z"
+								></path>
+							</svg>
+						</a>
 					</div>
+
 					<h2 class="text-xl text-white">Call Us</h2>
-					<a href="tel:+17705607975" class="text-white">770-560-7975</a>
+					<a href="tel:+14049334101" class="text-white">(404) 933-4101</a>
 				</div>
-				<div class="flex flex-col items-center justify-center">
+				<div class=" flex flex-col items-center justify-center">
 					<a
-						href="https://www.facebook.com/agileconstructionga/"
+						href="https://www.facebook.com/profile.php?id=61571450200141"
 						aria-label="Facebook link"
 						target="_blank"
 						id="facebookIcon"
@@ -88,34 +115,88 @@
 							xmlns="http://www.w3.org/2000/svg"
 							x="0px"
 							y="0px"
-							width="65"
-							height="65"
-							viewBox="0,0,256,256"
+							width="100"
+							height="100"
+							viewBox="0 0 48 48"
 						>
-							<g
-								fill="#6b7280"
-								fill-rule="nonzero"
-								stroke="none"
-								stroke-width="1"
-								stroke-linecap="butt"
-								stroke-linejoin="miter"
-								stroke-miterlimit="10"
-								stroke-dasharray=""
-								stroke-dashoffset="0"
-								font-family="none"
-								font-weight="none"
-								font-size="none"
-								text-anchor="none"
-								style="mix-blend-mode: normal"
-								><g transform="scale(5.12,5.12)"
-									><path
-										d="M9,4c-2.74952,0 -5,2.25048 -5,5v32c0,2.74952 2.25048,5 5,5h16.83203c0.10799,0.01785 0.21818,0.01785 0.32617,0h5.67383c0.10799,0.01785 0.21818,0.01785 0.32617,0h8.8418c2.74952,0 5,-2.25048 5,-5v-32c0,-2.74952 -2.25048,-5 -5,-5zM9,6h32c1.66848,0 3,1.33152 3,3v32c0,1.66848 -1.33152,3 -3,3h-8v-14h3.82031l1.40039,-7h-5.2207v-2c0,-0.55749 0.05305,-0.60107 0.24023,-0.72266c0.18718,-0.12159 0.76559,-0.27734 1.75977,-0.27734h3v-5.63086l-0.57031,-0.27149c0,0 -2.29704,-1.09766 -5.42969,-1.09766c-2.25,0 -4.09841,0.89645 -5.28125,2.375c-1.18284,1.47855 -1.71875,3.45833 -1.71875,5.625v2h-3v7h3v14h-16c-1.66848,0 -3,-1.33152 -3,-3v-32c0,-1.66848 1.33152,-3 3,-3zM32,15c2.07906,0 3.38736,0.45846 4,0.70117v2.29883h-1c-1.15082,0 -2.07304,0.0952 -2.84961,0.59961c-0.77656,0.50441 -1.15039,1.46188 -1.15039,2.40039v4h4.7793l-0.59961,3h-4.17969v16h-4v-16h-3v-3h3v-4c0,-1.83333 0.46409,-3.35355 1.28125,-4.375c0.81716,-1.02145 1.96875,-1.625 3.71875,-1.625z"
-									></path></g
-								></g
-							>
+							<linearGradient
+								id="Ld6sqrtcxMyckEl6xeDdMa_uLWV5A9vXIPu_gr1"
+								x1="9.993"
+								x2="40.615"
+								y1="9.993"
+								y2="40.615"
+								gradientUnits="userSpaceOnUse"
+								><stop offset="0" stop-color="#2aa4f4"></stop><stop offset="1" stop-color="#007ad9"
+								></stop></linearGradient
+							><path
+								fill="url(#Ld6sqrtcxMyckEl6xeDdMa_uLWV5A9vXIPu_gr1)"
+								d="M24,4C12.954,4,4,12.954,4,24s8.954,20,20,20s20-8.954,20-20S35.046,4,24,4z"
+							></path><path
+								fill="#fff"
+								d="M26.707,29.301h5.176l0.813-5.258h-5.989v-2.874c0-2.184,0.714-4.121,2.757-4.121h3.283V12.46 c-0.577-0.078-1.797-0.248-4.102-0.248c-4.814,0-7.636,2.542-7.636,8.334v3.498H16.06v5.258h4.948v14.452 C21.988,43.9,22.981,44,24,44c0.921,0,1.82-0.084,2.707-0.204V29.301z"
+							></path>
 						</svg>
 					</a>
 					<h2 class="text-xl text-white">Like our page!</h2>
+				</div>
+				<div
+					class="text-accent-foreground hover:text-accent justify-centers flex flex-col items-center"
+				>
+					<a
+						href="https://www.instagram.com/bluearcelectricllc/"
+						target="_blank"
+						aria-label="Instagram"
+					>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							x="0px"
+							y="0px"
+							width="100"
+							height="100"
+							viewBox="0 0 48 48"
+						>
+							<radialGradient
+								id="yOrnnhliCrdS2gy~4tD8ma_Xy10Jcu1L2Su_gr1"
+								cx="19.38"
+								cy="42.035"
+								r="44.899"
+								gradientUnits="userSpaceOnUse"
+								><stop offset="0" stop-color="#fd5"></stop><stop offset=".328" stop-color="#ff543f"
+								></stop><stop offset=".348" stop-color="#fc5245"></stop><stop
+									offset=".504"
+									stop-color="#e64771"
+								></stop><stop offset=".643" stop-color="#d53e91"></stop><stop
+									offset=".761"
+									stop-color="#cc39a4"
+								></stop><stop offset=".841" stop-color="#c837ab"></stop></radialGradient
+							><path
+								fill="url(#yOrnnhliCrdS2gy~4tD8ma_Xy10Jcu1L2Su_gr1)"
+								d="M34.017,41.99l-20,0.019c-4.4,0.004-8.003-3.592-8.008-7.992l-0.019-20	c-0.004-4.4,3.592-8.003,7.992-8.008l20-0.019c4.4-0.004,8.003,3.592,8.008,7.992l0.019,20	C42.014,38.383,38.417,41.986,34.017,41.99z"
+							></path><radialGradient
+								id="yOrnnhliCrdS2gy~4tD8mb_Xy10Jcu1L2Su_gr2"
+								cx="11.786"
+								cy="5.54"
+								r="29.813"
+								gradientTransform="matrix(1 0 0 .6663 0 1.849)"
+								gradientUnits="userSpaceOnUse"
+								><stop offset="0" stop-color="#4168c9"></stop><stop
+									offset=".999"
+									stop-color="#4168c9"
+									stop-opacity="0"
+								></stop></radialGradient
+							><path
+								fill="url(#yOrnnhliCrdS2gy~4tD8mb_Xy10Jcu1L2Su_gr2)"
+								d="M34.017,41.99l-20,0.019c-4.4,0.004-8.003-3.592-8.008-7.992l-0.019-20	c-0.004-4.4,3.592-8.003,7.992-8.008l20-0.019c4.4-0.004,8.003,3.592,8.008,7.992l0.019,20	C42.014,38.383,38.417,41.986,34.017,41.99z"
+							></path><path
+								fill="#fff"
+								d="M24,31c-3.859,0-7-3.14-7-7s3.141-7,7-7s7,3.14,7,7S27.859,31,24,31z M24,19c-2.757,0-5,2.243-5,5	s2.243,5,5,5s5-2.243,5-5S26.757,19,24,19z"
+							></path><circle cx="31.5" cy="16.5" r="1.5" fill="#fff"></circle><path
+								fill="#fff"
+								d="M30,37H18c-3.859,0-7-3.14-7-7V18c0-3.86,3.141-7,7-7h12c3.859,0,7,3.14,7,7v12	C37,33.86,33.859,37,30,37z M18,13c-2.757,0-5,2.243-5,5v12c0,2.757,2.243,5,5,5h12c2.757,0,5-2.243,5-5V18c0-2.757-2.243-5-5-5H18z"
+							></path>
+						</svg>
+					</a>
+					<h2 class="text-center text-xl text-white">Follow us on Instagram!</h2>
 				</div>
 			</div>
 			<!-- right col -->
@@ -159,20 +240,16 @@
 						</div>
 						<div>
 							<Label for="contactPreference">Contact Preference</Label>
-							<!-- <Select
-								onSelectedChange={(v: Selected<string> | undefined) =>
-									handleContactPreferenceChange(v)}
-							>
-								<SelectTrigger class="">
-									<Select.Value placeholder="Please Choose one" />
+							<Select bind:value={formData.contactPreference} type="single">
+								<SelectTrigger>
+									{formData.contactPreference ? formData.contactPreference : 'Select an option'}
 								</SelectTrigger>
 								<SelectContent>
-									<SelectItem value="Email">Email</SelectItem>
+									3 <SelectItem value="Email">Email</SelectItem>
+									<SelectItem value="Phone">Phone</SelectItem>
 									<SelectItem value="Text Message">Text Message</SelectItem>
-									<SelectItem value="Phone Call">Phone Call</SelectItem>
 								</SelectContent>
-								<SelectInput name="contactPreference" bind:value={formData.contactPreference} />
-							</Select> -->
+							</Select>
 						</div>
 
 						<div>
@@ -184,7 +261,7 @@
 							<Textarea id="message" placeholder="" class="h-56" bind:value={formData.message} />
 						</div>
 
-						<Button type="submit" class="bg-accent-foreground text-lg font-semibold">Send</Button>
+						<Button type="submit" class="bg-primary text-lg font-semibold text-white">Send</Button>
 					</div>
 				</form>
 			</div>
@@ -193,11 +270,6 @@
 </div>
 
 <style>
-	#phoneIcon {
-		height: 50px;
-		width: auto;
-	}
-
 	.contact {
 		font-size: 40px;
 	}

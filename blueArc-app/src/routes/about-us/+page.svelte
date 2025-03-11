@@ -42,10 +42,6 @@
 			<p>We look forward to building something great together!</p>
 		</div>
 	</div>
-	<div class="cursive-header flex flex-wrap justify-center text-xl">
-		<h1 class="">From My Family To Yours&nbsp;</h1>
-		<h1 class="">Thank You For Your Business</h1>
-	</div>
 
 	<div class="carousel mb-4">
 		<!-- <Carousel.Root plugins={[plugin]}>
@@ -79,7 +75,6 @@
 
 	h1 {
 		text-align: center;
-		color: #2c3e50;
 	}
 
 	.team-photo {
@@ -99,7 +94,6 @@
 	}
 
 	.paragraphs {
-		background-color: rgb(69, 84, 93);
 		color: white;
 		box-shadow:
 			0 20px 25px -5px rgb(0 0 0 / 0.1),
