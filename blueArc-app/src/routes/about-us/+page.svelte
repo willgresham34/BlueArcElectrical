@@ -13,9 +13,9 @@
 		</h1>
 	</div>
 	<div class="about-us grid grid-cols-1 gap-4 lg:grid-cols-2">
-		<!-- <div class="flex items-center justify-center">
-			<img class="team-photo" src="KrissyAndMichael.avif" alt="Our Team" /> 
-		</div> -->
+		<div class="flex items-center justify-center">
+			<img class="team-photo" src="Dario_F.avif" alt="Our Team" />
+		</div>
 		<div class="lg:text-md paragraphs bg-primary flex flex-col gap-4 text-lg shadow-2xl">
 			<p>
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
@@ -43,8 +43,8 @@
 		</div>
 	</div>
 
-	<div class="carousel mb-4">
-		<!-- <Carousel.Root plugins={[plugin]}>
+	<!-- <div class="carousel mb-4">
+		<Carousel.Root plugins={[plugin]}>
 			<Carousel.Content>
 				{#each familyPhotos as photo}
 					<Carousel.Item class=" basis-1/2 sm:basis-1/3 lg:basis-1/4 xl:basis-1/5"
@@ -52,18 +52,20 @@
 					>
 				{/each}
 			</Carousel.Content>
-		</Carousel.Root> -->
-	</div>
+		</Carousel.Root> 
+	</div> -->
 </div>
 
 <style>
-	.cursive-header {
-		/* font-family: 'Great Vibes', cursive; */
+	/* .cursive-header {
+		font-family: 'Great Vibes', cursive; 
 		font-weight: 600;
 		text-align: center;
 		margin-top: 2rem;
 		margin-bottom: 1rem;
-	}
+	} 
+	*/
+
 	.about-us {
 		padding: 1rem 3rem;
 		font-family: Arial, sans-serif;
@@ -86,12 +88,12 @@
 		max-width: 600px;
 	}
 
-	.carousel img {
+	/* .carousel img {
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
 		aspect-ratio: 4 / 3;
-	}
+	} */
 
 	.paragraphs {
 		color: white;

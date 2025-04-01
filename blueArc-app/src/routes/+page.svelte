@@ -1,10 +1,17 @@
 <script lang="ts">
 	import * as Carousel from '$lib/components/ui/carousel/index.js';
-	import Particles from '$lib/components/ui/particles/Particles.svelte';
-	//import Autoplay from 'embla-carousel-autoplay';
-	//import { carouselPhotos } from '$lib/carouselPhotos';
+	import Autoplay from 'embla-carousel-autoplay';
+	import { flickrService } from '../services/flickrService.js';
+	import { onMount } from 'svelte';
 
-	//const plugin = Autoplay({ delay: 5000, stopOnInteraction: true });
+	let carouselPhotos: any[] = [];
+
+	onMount(async () => {
+		carouselPhotos = await flickrService('72177720324786302');
+		console.log(carouselPhotos);
+	});
+
+	const plugin = Autoplay({ delay: 5000, stopOnInteraction: true });
 </script>
 
 <div class="w-full">
@@ -38,17 +45,17 @@
 			</div>
 		</div>
 	</div>
-	<!-- <div class="carousel mb-4">
+	<div class="carousel mb-4">
 		<Carousel.Root plugins={[plugin]}>
 			<Carousel.Content>
 				{#each carouselPhotos as photo}
 					<Carousel.Item class=" basis-1/2 sm:basis-1/3 lg:basis-1/4 xl:basis-1/5"
-						><img src={`/builds/${photo}`} alt="build1" /></Carousel.Item
+						><img src={photo.src} alt={photo.name} /></Carousel.Item
 					>
 				{/each}
 			</Carousel.Content>
 		</Carousel.Root>
-	</div> -->
+	</div>
 	<div class="my-4 grid w-full grid-cols-1 sm:grid-cols-2">
 		<div class="grid-item mb-8 flex items-center justify-center sm:mb-0">
 			<section class=" h-auto rounded-lg">
