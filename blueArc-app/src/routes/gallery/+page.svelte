@@ -5,7 +5,7 @@
 	let galleryPhotos: any[] = [];
 
 	onMount(async () => {
-		galleryPhotos = await flickrService();
+		galleryPhotos = await flickrService('72177720324786302');
 		console.log(galleryPhotos);
 	});
 
@@ -55,7 +55,7 @@
 				}}
 				on:keydown={handleKeydown}
 			>
-				<img src={photo.src} alt={`${photo.name}`} />
+				<img src={photo.src} alt={photo.name} />
 			</div>
 		{/each}
 	</div>

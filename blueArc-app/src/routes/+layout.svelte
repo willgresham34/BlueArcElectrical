@@ -82,12 +82,12 @@
 	{@render children()}
 </div>
 
-<footer class="bg-primary-foreground mt-8 text-white shadow-xl">
+<footer class="bg-primary mt-8 text-white shadow-xl">
 	<div class=" mx-auto max-w-7xl px-6 py-6">
 		<div class="grid grid-cols-2 gap-6 sm:grid-cols-3">
 			<!-- About, Contact, and Gallery Links -->
 			<div>
-				<h3 class="text-primary mb-4 text-lg font-semibold">Quick Links</h3>
+				<h3 class="mb-4 text-lg font-semibold text-white">Quick Links</h3>
 				<ul>
 					<li><a href="/about-us" class="text-slate-300 hover:text-white">About Us</a></li>
 					<li><a href="/contact" class="text-slate-300 hover:text-white">Contact</a></li>
@@ -97,7 +97,7 @@
 
 			<!-- Social Media Links -->
 			<div>
-				<h3 class="text-primary mb-4 text-lg font-semibold">Follow Us</h3>
+				<h3 class="mb-4 text-lg font-semibold text-white">Follow Us</h3>
 				<ul>
 					<li>
 						<a
@@ -119,7 +119,7 @@
 
 			<!-- Contact Info (Phone, Email) -->
 			<div class="col-span-2 sm:col-span-1">
-				<h3 class="text-primary mb-4 text-lg font-semibold">Contact Information</h3>
+				<h3 class="mb-4 text-lg font-semibold text-white">Contact Information</h3>
 				<ul>
 					<li>
 						<a href="tel:4049334101" class="text-slate-300 hover:text-white"

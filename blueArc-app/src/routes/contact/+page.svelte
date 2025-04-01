@@ -245,7 +245,7 @@
 									{formData.contactPreference ? formData.contactPreference : 'Select an option'}
 								</SelectTrigger>
 								<SelectContent>
-									3 <SelectItem value="Email">Email</SelectItem>
+									<SelectItem value="Email">Email</SelectItem>
 									<SelectItem value="Phone">Phone</SelectItem>
 									<SelectItem value="Text Message">Text Message</SelectItem>
 								</SelectContent>
