@@ -1,9 +1,6 @@
 <script>
 	import Particles, { particlesInit } from '@tsparticles/svelte';
 	import { loadFull } from 'tsparticles'; // if you are going to use `loadFull`, install the "tsparticles" package too.
-	import { loadSlim } from '@tsparticles/slim'; // if you are going to use `loadSlim`, install the "@tsparticles/slim" package too.
-
-	let particlesUrl = 'http://foo.bar/particles.json'; // placeholder, replace it with a real url
 
 	let particlesConfig = {
 		particles: {
