@@ -1,18 +1,15 @@
 <script>
 	import Particles, { particlesInit } from '@tsparticles/svelte';
 	import { loadFull } from 'tsparticles'; // if you are going to use `loadFull`, install the "tsparticles" package too.
-	import { loadSlim } from '@tsparticles/slim'; // if you are going to use `loadSlim`, install the "@tsparticles/slim" package too.
-
-	let particlesUrl = 'http://foo.bar/particles.json'; // placeholder, replace it with a real url
 
 	let particlesConfig = {
 		particles: {
 			color: {
-				value: '#0777d9'
+				value: '#00000'
 			},
 			links: {
 				enable: true,
-				color: '#0777d9',
+				color: '#28609f',
 				width: 1,
 				distance: 100
 			},
@@ -47,7 +44,7 @@
 <div class="particles-container">
 	<Particles
 		id="tsparticles"
-		class="put your classes here"
+		class=""
 		style=""
 		options={particlesConfig}
 		on:particlesLoaded={onParticlesLoaded}
@@ -56,11 +53,11 @@
 
 <style>
 	.particles-container {
-		position: absolute; /* or relative */
+		position: absolute;
 		top: 0;
 		left: 0;
 		width: 100%;
 		height: 100%;
-		z-index: -1; /* Ensures it stays behind other content */
+		z-index: -1;
 	}
 </style>
