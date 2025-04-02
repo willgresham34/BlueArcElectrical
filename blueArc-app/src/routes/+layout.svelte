@@ -240,9 +240,9 @@
 	}
 
 	.nav-links li.selected a {
-		border-bottom: 2px solid hsl(var(--secondary));
+		border-bottom: 2px solid hsl(var(--primary-foreground));
 		padding-bottom: 0.25rem;
-		color: hsl(var(--secondary));
+		color: hsl(var(--primary-foreground));
 	}
 
 	.nav-links li a:hover {

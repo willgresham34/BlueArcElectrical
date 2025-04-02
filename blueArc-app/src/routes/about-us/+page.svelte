@@ -1,9 +1,4 @@
 <script lang="ts">
-	// import * as Carousel from '$lib/components/ui/carousel/index.js';
-	// import Autoplay from 'embla-carousel-autoplay';
-	// import { familyPhotos } from '$lib/familyPhotos';
-
-	// const plugin = Autoplay({ delay: 5000, stopOnInteraction: true });
 </script>
 
 <div class="flex h-fit flex-col items-center justify-center">
@@ -18,54 +13,30 @@
 		</div>
 		<div class="lg:text-md paragraphs bg-primary flex flex-col gap-4 text-lg shadow-2xl">
 			<p>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-				labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-				laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-				voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-				cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				At Blue Arc Electrical, we are a fresh and innovative electrical company founded by two
+				lifelong friends who share a passion for quality craftsmanship and reliable service. With
+				years of industry experience, we built Blue Arc Electrical to provide expert electrical
+				solutions for homeowners and businesses alike. From wiring and panel upgrades to lighting
+				installations and EV charger setups, we are committed to delivering safe, efficient, and
+				modern electrical systems that meet the evolving needs of our customers. Whether you need to
+				upgrade an outdated electrical panel or install energy-efficient lighting, we ensure every
+				project is completed with precision and professionalism.
 			</p>
 			<p>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-				labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-				laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-				voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-				cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				Customer satisfaction is the foundation of our business. We take pride in offering
+				personalized service, tailoring solutions to fit each client’s specific needs. Our
+				commitment to safety, innovation, and attention to detail sets us apart in the industry. As
+				a locally owned and operated company, we value the relationships we build with our customers
+				and the community. Whether you’re renovating your home, upgrading your commercial space, or
+				installing an EV charging station, Blue Arc Electrical is ready to power your project with
+				expertise and reliability.
 			</p>
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-				labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-				laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-				voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-				cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-			</p>
-
-			<p>We look forward to building something great together!</p>
+			<p>We look forward to making your dream a reality!</p>
 		</div>
 	</div>
-
-	<!-- <div class="carousel mb-4">
-		<Carousel.Root plugins={[plugin]}>
-			<Carousel.Content>
-				{#each familyPhotos as photo}
-					<Carousel.Item class=" basis-1/2 sm:basis-1/3 lg:basis-1/4 xl:basis-1/5"
-						><img src={`/family/${photo}`} alt="familyPhoto" /></Carousel.Item
-					>
-				{/each}
-			</Carousel.Content>
-		</Carousel.Root> 
-	</div> -->
 </div>
 
 <style>
-	/* .cursive-header {
-		font-family: 'Great Vibes', cursive; 
-		font-weight: 600;
-		text-align: center;
-		margin-top: 2rem;
-		margin-bottom: 1rem;
-	} 
-	*/
-
 	.about-us {
 		padding: 1rem 3rem;
 		font-family: Arial, sans-serif;
@@ -87,13 +58,6 @@
 		aspect-ratio: 1/1;
 		max-width: 600px;
 	}
-
-	/* .carousel img {
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-		aspect-ratio: 4 / 3;
-	} */
 
 	.paragraphs {
 		color: white;

@@ -60,7 +60,7 @@
 		<div class="grid-item mb-8 flex items-center justify-center sm:mb-0">
 			<section class=" h-auto rounded-lg">
 				<div class="mx-auto px-4 text-white">
-					<h2 class=" text-primary rounded-lg">Services We Handle</h2>
+					<h2 class=" text-primary-foreground rounded-lg">Services We Handle</h2>
 					<div class="text-center sm:text-start">
 						<ul class="  my-2 grid grid-cols-1 gap-2 rounded-lg py-2 sm:grid-cols-1">
 							<li class="bannerSubText">Fixture Installation</li>
