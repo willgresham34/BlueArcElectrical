@@ -7,6 +7,7 @@
 	let { children } = $props();
 	let isMenuOpen = $state(false);
 	let currentPath = $state('');
+	let particlesCount = $state(150);
 
 	// Determine the current URL path
 	onMount(() => {
@@ -17,12 +18,24 @@
 		currentPath = window.location.pathname;
 	});
 
+	function getResponsiveParticleCount(width: number): number {
+		if (width > 1200) return 150;
+		if (width > 992) return 110;
+		if (width > 768) return 90;
+		if (width > 480) return 70;
+		return 50;
+	}
+
 	function handleResize() {
-		if (window.innerWidth > 640) {
+		const width = window.innerWidth;
+
+		if (width > 640) {
 			isMenuOpen = true;
 		} else {
 			isMenuOpen = false;
 		}
+
+		particlesCount = getResponsiveParticleCount(width);
 	}
 
 	function toggleMenu() {
@@ -78,7 +91,7 @@
 </nav>
 
 <div class="body">
-	<Particles />
+	<Particles count={particlesCount} />
 	{@render children()}
 </div>
 

@@ -1,6 +1,8 @@
-<script>
+<script lang="ts">
 	import Particles, { particlesInit } from '@tsparticles/svelte';
 	import { loadFull } from 'tsparticles'; // if you are going to use `loadFull`, install the "tsparticles" package too.
+
+	export let count: number = 150;
 
 	let particlesConfig = {
 		particles: {
@@ -18,10 +20,13 @@
 				speed: 1
 			},
 			number: {
-				value: 150
+				value: count
 			}
 		}
 	};
+
+	// Update config when count changes
+	$: particlesConfig.particles.number.value = count;
 
 	// @ts-ignore
 	let onParticlesLoaded = (event) => {
@@ -42,13 +47,9 @@
 </script>
 
 <div class="particles-container">
-	<Particles
-		id="tsparticles"
-		class=""
-		style=""
-		options={particlesConfig}
-		on:particlesLoaded={onParticlesLoaded}
-	/>
+	{#key count}
+		<Particles id="tsparticles" options={particlesConfig} on:particlesLoaded={onParticlesLoaded} />
+	{/key}
 </div>
 
 <style>
