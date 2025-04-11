@@ -58,7 +58,7 @@
 <nav class="sticky top-0 z-10 flex items-center justify-between bg-white p-2 text-white shadow-xl">
 	<div class="flex items-center">
 		<a href="/">
-			<img src="/logo.png" alt="Logo" height="60px" width="60px" />
+			<img src="/Blue-arc-banner.png" alt="Logo" height="60px" width="170px" />
 		</a>
 	</div>
 
